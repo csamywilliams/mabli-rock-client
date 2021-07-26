@@ -1,8 +1,7 @@
 {
     "extends": [
         "eslint:recommended",
-        "plugin:react/recommended",
-        "plugin:react-hooks/recommended"
+        "plugin:react/recommended"
     ],
     "env": {
         "browser": true,
@@ -17,7 +16,23 @@
         "sourceType": "module"
     },
     "plugins": [
-        "react"
+        "react",
+        "testing-library",
+        "plugin:react-hooks/recommended",
+        "plugin:testing-library/react",
+        "plugin:testing-library/dom"
     ],
-    "rules": {}
+    "rules": {},
+    "overrides": [
+        {
+            // 3) Now we enable eslint-plugin-testing-library rules or preset only for matching files!
+            "files": [
+                "**/__tests__/**/*.[jt]s?(x)",
+                "**/?(*.)+(spec|test).[jt]s?(x)"
+            ],
+            "extends": [
+                "plugin:testing-library/react"
+            ]
+        }
+    ]
 }

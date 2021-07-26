@@ -1,5 +1,5 @@
 module.exports = {
-	verbose: false,
+	verbose: true,
 	rootDir: '../../',
 	collectCoverageFrom: [
 		'<rootDir>/src/**/*.{js,jsx,mjs}',
@@ -26,10 +26,17 @@ module.exports = {
 	moduleFileExtensions: ['js', 'jsx'],
 	moduleNameMapper: {
 		'^__ajaxHandlers__(.*)$': '<rootDir>/src/__ajaxHandlers__$1',
-		'^components(.*)$': '<rootDir>/src/js/components$1',
-		'^hooks(.*)$': '<rootDir>/src/js/hooks$1',
+		'^components(.*)$': '<rootDir>/src/components$1',
+		'^hooks(.*)$': '<rootDir>/src/hooks$1',
 		'^js\\/(.*)$': '<rootDir>/src/js/$1',
 		'^__testHelpers__(.*)$': '<rootDir>/src/__testHelpers__$1',
+		'^atoms(.*)$': '<rootDir>/src/components/UI/atoms$1',
+		'^assets(.*)$': '<rootDir>/src/assets$1',
+		'^pages(.*)$': '<rootDir>/src/components/pages$1',
+		'^molecules(.*)$': '<rootDir>/src/components/UI/molecules$1',
+		'^organisms(.*)$': '<rootDir>/src/components/UI/organisms$1',
+		'^templates(.*)$': '<rootDir>/src/components/templates$1',
+		'^utils(.*)$': '<rootDir>/src/utils$1',
 	},
 	testPathIgnorePatterns: [
 		'/node_modules/',
