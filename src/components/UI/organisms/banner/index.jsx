@@ -5,7 +5,7 @@ import { BannerStyled } from './banner.styled';
 const Banner = ({ children }) => <BannerStyled>{children}</BannerStyled>;
 
 Banner.propTypes = {
-	children: PropTypes.func.isRequired,
+	children: PropTypes.shape().isRequired,
 };
 
 export default Banner;

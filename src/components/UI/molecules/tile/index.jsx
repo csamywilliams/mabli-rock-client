@@ -3,12 +3,12 @@ import PropTypes from 'prop-types';
 
 import { IoMdAddCircleOutline } from 'react-icons/io';
 
-import IconButton from '../../atoms/icon-button';
-import Icon from '../../atoms/icon';
+import IconButton from 'atoms/icon-button';
+import Icon from 'atoms/icon';
 
 import { TileStyled, TileContentStyled, IconStyled } from './tile.styled';
 
-const Tile = ({ name, icon, styledAs }) => {
+const Tile = ({ name, icon, styledAs, ariaLabel }) => {
 	return (
 		<TileStyled>
 			<IconStyled>
@@ -19,6 +19,7 @@ const Tile = ({ name, icon, styledAs }) => {
 			<TileContentStyled>
 				<p>{name}</p>
 				<IconButton
+					ariaLabel={ariaLabel}
 					icon={IoMdAddCircleOutline}
 					iconSize="2rem"
 					styledAs="normal"
@@ -33,6 +34,7 @@ Tile.defaultTypes = {
 };
 
 Tile.propTypes = {
+	ariaLabel: PropTypes.string.isRequired,
 	name: PropTypes.string.isRequired,
 	icon: PropTypes.func.isRequired,
 	styledAs: PropTypes.string,

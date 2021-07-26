@@ -7,13 +7,14 @@ import { TileRowStyled } from './tile-row.styled';
 
 const TileRow = ({ tiles }) => (
 	<TileRowStyled>
-		{tiles.map(({ name, icon, page, styledAs }) => (
+		{tiles.map(({ name, icon, page, styledAs, ariaLabel }) => (
 			<Tile
 				key={name}
 				name={name}
 				icon={icon}
 				page={page}
 				styledAs={styledAs}
+				ariaLabel={ariaLabel}
 			/>
 		))}
 	</TileRowStyled>

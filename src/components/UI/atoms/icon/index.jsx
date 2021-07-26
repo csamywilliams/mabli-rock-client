@@ -8,7 +8,7 @@ const Icon = ({ icon, iconSize }) => {
 	const IconComponent = icon;
 
 	return (
-		<IconStyled>
+		<IconStyled aria-hidden>
 			<IconContext.Provider value={{ size: iconSize }}>
 				<IconComponent />
 			</IconContext.Provider>

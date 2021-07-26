@@ -5,8 +5,8 @@ import { IconButtonStyled } from './icon-button.styled';
 
 import Icon from '../icon';
 
-const IconButton = ({ icon, styledAs, iconSize }) => (
-	<IconButtonStyled>
+const IconButton = ({ icon, styledAs, iconSize, ariaLabel }) => (
+	<IconButtonStyled aria-label={ariaLabel}>
 		<Icon icon={icon} styledAs={styledAs} iconSize={iconSize} />
 	</IconButtonStyled>
 );
@@ -17,6 +17,7 @@ IconButton.propTypes = {
 };
 
 IconButton.propTypes = {
+	ariaLabel: PropTypes.string.isRequired,
 	icon: PropTypes.func.isRequired,
 	iconSize: PropTypes.string,
 	styledAs: PropTypes.string,
